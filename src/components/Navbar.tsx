@@ -30,26 +30,26 @@ export default function Navbar() {
     <nav 
       id="main-nav"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass py-3 shadow-lg' : 'bg-transparent py-5'
+        scrolled ? 'glass py-3 shadow-sm border-b border-emerald-100' : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-primary-green p-2 rounded-xl group-hover:rotate-12 transition-transform shadow-lg shadow-green-200">
-              <Plane className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-primary-green rounded-xl flex items-center justify-center rotate-3 group-hover:rotate-12 transition-transform shadow-lg shadow-emerald-200">
+              <div className="w-5 h-[2px] bg-white rounded-full"></div>
             </div>
-            <span className="text-2xl font-black font-display text-primary-green tracking-tighter">وضع طيران</span>
+            <span className="text-2xl font-bold font-display text-emerald-900 tracking-tight">وضع طيران</span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-semibold transition-colors hover:text-primary-green ${
-                  location.pathname === link.path ? 'text-primary-green underline decoration-2 underline-offset-8' : 'text-gray-600'
+                className={`text-sm font-medium transition-colors hover:text-primary-green ${
+                  location.pathname === link.path ? 'text-primary-green border-b-2 border-primary-green' : 'text-slate-600'
                 }`}
               >
                 {link.name}
@@ -57,9 +57,9 @@ export default function Navbar() {
             ))}
             <Link 
               to="/tips" 
-              className="bg-primary-green text-white px-5 py-2.5 rounded-full font-bold hover:scale-105 active:scale-95 transition-all shadow-md shadow-green-100"
+              className="bg-primary-green text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-emerald-200 hover:bg-emerald-700 transition-all"
             >
-              ابدأ وضع طيران
+              ابدأ الرحلة
             </Link>
           </div>
 

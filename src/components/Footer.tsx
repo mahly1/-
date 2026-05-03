@@ -3,71 +3,45 @@ import { Plane, Facebook, Twitter, Instagram, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 pt-16 pb-8 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="bg-primary-green p-1.5 rounded-lg">
-                <Plane className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-black font-display text-primary-green italic tracking-tighter">وضع طيران</span>
-            </Link>
-            <p className="text-gray-500 leading-relaxed">
-              وضع طيران حملة بتفكرك إن الأمان أحيانًا بيبدأ من إنك تسمع. انفصالك عن العالم الخارجي هو اتصالك الحقيقي بعيلتك.
-            </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-400 hover:text-primary-green transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-400 hover:text-primary-green transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-400 hover:text-primary-green transition-colors">
-                <Instagram size={20} />
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-bold mb-6 text-gray-900">روابط سريعة</h4>
-            <ul className="space-y-4">
-              <li><Link to="/" className="text-gray-600 hover:text-primary-green transition-colors">الرئيسية</Link></li>
-              <li><Link to="/about" className="text-gray-600 hover:text-primary-green transition-colors">عن الحملة</Link></li>
-              <li><Link to="/why-listening" className="text-gray-600 hover:text-primary-green transition-colors">ليه نسمعهم؟</Link></li>
-              <li><Link to="/risks" className="text-gray-600 hover:text-primary-green transition-colors">المخاطر</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-bold mb-6 text-gray-900">مساعدة ودعم</h4>
-            <ul className="space-y-4">
-              <li><Link to="/tips" className="text-gray-600 hover:text-primary-green transition-colors">النصائح</Link></li>
-              <li><Link to="/resources" className="text-gray-600 hover:text-primary-green transition-colors">الموارد</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-primary-green transition-colors">تواصل معنا</Link></li>
-              <li><Link to="/parent-guide" className="text-gray-600 hover:text-primary-green transition-colors">دليل الوالدين</Link></li>
-            </ul>
-          </div>
-
-          <div className="bg-primary-green/5 p-6 rounded-3xl border border-primary-green/10">
-            <h4 className="text-lg font-bold mb-4 text-primary-green flex items-center gap-2">
-              <Heart className="w-5 h-5 fill-primary-green" />
-              خليك جزء من التغيير
-            </h4>
-            <p className="text-sm text-gray-600 mb-4">
-              شارك الرسالة… يمكن توصل لبيت محتاج يسمعها ويغير حياة طفل.
-            </p>
-            <Link to="/contact" className="inline-block w-full py-3 bg-primary-green text-white text-center rounded-xl font-bold hover:shadow-lg transition-shadow">
-              انضم إلينا
-            </Link>
+    <footer className="bg-dark-slate py-12 px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between text-white relative z-10">
+      <div className="flex flex-col md:flex-row gap-12 mb-8 md:mb-0">
+        <div className="flex items-center gap-4">
+          <div className="text-3xl font-bold text-primary-emerald">10+</div>
+          <div className="text-xs leading-tight text-white/60 uppercase tracking-widest font-bold">
+            دقايق كفاية <br/>تغير اليوم
           </div>
         </div>
-
-        <div className="pt-8 border-t border-gray-100 text-center">
-          <p className="text-sm text-gray-400 font-medium">
-            افصل.. اسمع.. أنت الأمان &copy; {new Date().getFullYear()} جميع الحقوق محفوظة
-          </p>
+        <div className="flex items-center gap-4 border-r border-white/10 pr-12">
+          <div className="text-3xl font-bold text-primary-emerald">7</div>
+          <div className="text-xs leading-tight text-white/60 uppercase tracking-widest font-bold">
+            أيام من <br/>التحدي الحقيقي
+          </div>
         </div>
+      </div>
+      
+      <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex items-center gap-8">
+          <span className="text-sm font-bold text-primary-emerald">افصل</span>
+          <div className="w-4 h-[1px] bg-white/20"></div>
+          <span className="text-sm font-bold">اسمع</span>
+          <div className="w-4 h-[1px] bg-white/20"></div>
+          <span className="text-sm font-bold text-soft-rose">أنت الأمان</span>
+        </div>
+        
+        <div className="flex gap-4">
+          <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors">
+            <Facebook size={18} />
+          </div>
+          <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors text-white">
+            <Twitter size={18} />
+          </div>
+        </div>
+      </div>
+      
+      <div className="w-full pt-8 mt-8 border-t border-white/5 text-center md:hidden">
+         <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest">
+           وضع طيران &copy; {new Date().getFullYear()}
+         </p>
       </div>
     </footer>
   );

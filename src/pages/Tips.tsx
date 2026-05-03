@@ -45,17 +45,17 @@ export default function Tips() {
           <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6"
           >
-            <Lightbulb className="text-yellow-600 w-10 h-10" />
+            <Lightbulb className="text-primary-green w-10 h-10" />
           </motion.div>
-          <h1 className="text-5xl lg:text-7xl font-black font-display text-gray-900 italic tracking-tighter">نصائح وخطوات</h1>
-          <p className="text-xl text-gray-500 max-w-3xl mx-auto font-medium">طرق بسيطة تبدأ بيها من النهارده وتغير حياتك مع ابنك.</p>
+          <h1 className="text-5xl lg:text-7xl font-black font-display text-slate-900 italic tracking-tighter">نصائح وخطوات</h1>
+          <p className="text-xl text-slate-500 max-w-3xl mx-auto font-medium">طرق بسيطة تبدأ بيها من النهارده وتغير حياتك مع ابنك.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-32">
-          <section className="bg-gray-50 p-10 rounded-[3rem] space-y-8 italic font-bold">
-            <h3 className="text-2xl font-black text-gray-900 italic">قبل ما تسمع:</h3>
+          <section className="bg-emerald-50 p-10 rounded-[3rem] space-y-8 italic font-bold border border-emerald-100">
+            <h3 className="text-2xl font-black text-slate-900 italic">قبل ما تسمع:</h3>
             <ul className="space-y-4">
                {[
                  'سيب الموبايل بعيد خالص',
@@ -65,15 +65,15 @@ export default function Tips() {
                  'اسأل سؤال بسيط وهادي'
                ].map((t, i) => (
                  <li key={i} className="flex gap-4 items-start">
-                   <CheckCircle2 className="text-primary-green flex-shrink-0 mt-1" size={20} />
+                   <CheckCircle2 className="text-primary-emerald flex-shrink-0 mt-1" size={20} />
                    <span>{t}</span>
                  </li>
                ))}
             </ul>
           </section>
 
-          <section className="bg-gray-50 p-10 rounded-[3rem] space-y-8 italic font-bold">
-            <h3 className="text-2xl font-black text-gray-900 italic">أثناء الكلام:</h3>
+          <section className="bg-emerald-50 p-10 rounded-[3rem] space-y-8 italic font-bold border border-emerald-100">
+            <h3 className="text-2xl font-black text-slate-900 italic">أثناء الكلام:</h3>
             <ul className="space-y-4">
                {[
                  'متقاطعوش وهو بيحكي',
@@ -83,15 +83,15 @@ export default function Tips() {
                  'اديله وقته الكامل للتعبير'
                ].map((t, i) => (
                  <li key={i} className="flex gap-4 items-start">
-                   <CheckCircle2 className="text-primary-green flex-shrink-0 mt-1" size={20} />
+                   <CheckCircle2 className="text-primary-emerald flex-shrink-0 mt-1" size={20} />
                    <span>{t}</span>
                  </li>
                ))}
             </ul>
           </section>
 
-          <section className="bg-gray-50 p-10 rounded-[3rem] space-y-8 italic font-bold">
-            <h3 className="text-2xl font-black text-gray-900 italic">بعد الكلام:</h3>
+          <section className="bg-emerald-50 p-10 rounded-[3rem] space-y-8 italic font-bold border border-emerald-100">
+            <h3 className="text-2xl font-black text-slate-900 italic">بعد الكلام:</h3>
             <ul className="space-y-4">
                {[
                  'اشكره دائمًا إنه حكى لك',
@@ -101,7 +101,7 @@ export default function Tips() {
                  'خليه يحس إن كلامه فرق معاك'
                ].map((t, i) => (
                  <li key={i} className="flex gap-4 items-start">
-                   <CheckCircle2 className="text-primary-green flex-shrink-0 mt-1" size={20} />
+                   <CheckCircle2 className="text-primary-emerald flex-shrink-0 mt-1" size={20} />
                    <span>{t}</span>
                  </li>
                ))}
@@ -115,17 +115,17 @@ export default function Tips() {
             <h3 className="text-3xl font-black text-primary-green font-display italic flex items-center gap-2">جمل تساعدك <MessageCircle /></h3>
             <div className="grid grid-cols-2 gap-4">
               {phrases.map((p, i) => (
-                <div key={i} className="p-4 bg-green-50 rounded-2xl border border-green-100 font-bold italic text-center shadow-sm">
+                <div key={i} className="p-4 bg-emerald-50 rounded-2xl border border-emerald-100 font-bold italic text-center shadow-sm">
                   {p}
                 </div>
               ))}
             </div>
           </div>
           <div className="space-y-6">
-            <h3 className="text-3xl font-black text-soft-red font-display italic flex items-center gap-2">جمل بلاش تقولها <XCircle /></h3>
+            <h3 className="text-3xl font-black text-soft-rose font-display italic flex items-center gap-2">جمل بلاش تقولها <XCircle /></h3>
             <div className="grid grid-cols-2 gap-4">
               {badPhrases.map((p, i) => (
-                <div key={i} className="p-4 bg-red-50 rounded-2xl border border-red-100 font-bold italic text-center shadow-sm">
+                <div key={i} className="p-4 bg-rose-50 rounded-2xl border border-rose-100 font-bold italic text-center shadow-sm">
                   {p}
                 </div>
               ))}
@@ -134,13 +134,13 @@ export default function Tips() {
         </div>
 
         {/* 7 Day Challenge */}
-        <section className="bg-slate-900 rounded-[4rem] p-12 lg:p-20 text-white overflow-hidden relative">
+        <section className="bg-dark-slate rounded-[4rem] p-12 lg:p-20 text-white overflow-hidden relative border-8 border-emerald-50/10">
           <div className="absolute top-0 right-0 p-12 opacity-5">
             <Calendar size={150} />
           </div>
           <div className="text-center mb-16 space-y-4 relative z-10">
-            <h2 className="text-4xl lg:text-5xl font-black font-display italic tracking-tight">تحدي وضع طيران (7 أيام)</h2>
-            <p className="text-gray-400 font-bold italic">7 أيام من التواصل الحقيقي.. جرب ومش هتخسر.</p>
+            <h2 className="text-4xl lg:text-5xl font-black font-display italic tracking-tight italic">تحدي وضع طيران (7 أيام)</h2>
+            <p className="text-emerald-50/60 font-bold italic">7 أيام من التواصل الحقيقي.. جرب ومش هتخسر.</p>
           </div>
 
           <div className="space-y-4 relative z-10 max-w-4xl mx-auto">
@@ -150,17 +150,17 @@ export default function Tips() {
                 whileHover={{ scale: 1.02 }}
                 onClick={() => toggleDay(c.day)}
                 className={`p-6 rounded-[2rem] border transition-all cursor-pointer flex items-center gap-6 ${
-                  checkedDays.includes(c.day) ? 'bg-primary-green border-primary-green' : 'bg-white/5 border-white/10 hover:bg-white/10'
+                  checkedDays.includes(c.day) ? 'bg-primary-emerald border-primary-emerald' : 'bg-white/5 border-white/10 hover:bg-white/10'
                 }`}
               >
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center font-black text-xl flex-shrink-0 italic tracking-tighter ${
-                  checkedDays.includes(c.day) ? 'bg-white text-primary-green' : 'bg-white/10 text-white'
+                  checkedDays.includes(c.day) ? 'bg-white text-primary-emerald shadow-lg' : 'bg-white/10 text-white'
                 }`}>
                   {c.day}
                 </div>
                 <div className="flex-grow">
                   <h4 className="text-xl font-bold italic mb-1">{c.title}</h4>
-                  <p className={`text-sm italic ${checkedDays.includes(c.day) ? 'text-green-50' : 'text-gray-400'}`}>
+                  <p className={`text-sm italic ${checkedDays.includes(c.day) ? 'text-emerald-50' : 'text-slate-400'}`}>
                     {c.text}
                   </p>
                 </div>
@@ -170,6 +170,7 @@ export default function Tips() {
           </div>
         </section>
       </div>
+
     </motion.div>
   );
 }
